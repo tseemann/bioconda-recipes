@@ -12,13 +12,18 @@ requirements:
     - cmake
     - boost
     - git
-    - gcc   # [linux]
-    - llvm  # [osx]
+    - gcc
+#    - gcc [not osx]
+#    - llvm [osx]
   run: 
-    - libgcc # [linux]
+    - libgcc
+#    - libgcc [not osx]
 
 about:
   home: http://github.com/karel-brinda/ococo
   license: MIT
   summary: "OCOCO, an online consensus caller"
-  
+
+test:
+  commands:
+    - ococo --version
