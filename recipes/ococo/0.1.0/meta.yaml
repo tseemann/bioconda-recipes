@@ -2,27 +2,31 @@ package:
   name: ococo
   version: 0.1.0
 
+about:
+  home: http://github.com/karel-brinda/ococo
+  license: MIT
+  summary: "OCOCO, an online consensus caller"
+
 source:
   fn: ococo-0.1.0.tar.gz
   url: "https://github.com/karel-brinda/ococo/archive/0.1.0.tar.gz"
   sha256: "2d3bf71d8a01c3aa61778f4a9acda08759c9e905bbb39485cd800eadf356c782"
 
+build:
+  string: boost{{CONDA_BOOST}}_{{PKG_BUILDNUM}}
+
 requirements:
   build:
     - cmake
-    - boost
+    - boost {{CONDA_BOOST}}*
     - git
     - gcc
 #    - gcc [not osx]
 #    - llvm [osx]
   run: 
     - libgcc
+    - boost {{CONDA_BOOST}}*
 #    - libgcc [not osx]
-
-about:
-  home: http://github.com/karel-brinda/ococo
-  license: MIT
-  summary: "OCOCO, an online consensus caller"
 
 test:
   commands:
