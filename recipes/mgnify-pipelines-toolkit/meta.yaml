@@ -1,5 +1,9 @@
 {% set name = "mgnify-pipelines-toolkit" %}
+<<<<<<< HEAD
 {% set version = "1.4.23" %}
+=======
+{% set version = "1.4.24" %}
+>>>>>>> upstream/master
 
 package:
   name: {{ name|lower }}
@@ -7,7 +11,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/mgnify_pipelines_toolkit-{{ version }}.tar.gz
+<<<<<<< HEAD
   sha256: 5372332d3aa4f073e1f320b23338f14858d0442405428914fe5da5d07030a3bd
+=======
+  sha256: b28652d9dad8d384e1c221232bb0c288f52f8b05102deae52b001ce5184d4268
+>>>>>>> upstream/master
 
 build:
   entry_points:

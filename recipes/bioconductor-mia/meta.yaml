@@ -1,6 +1,7 @@
 {% set version = "1.18.0" %}
 {% set name = "mia" %}
 {% set bioc = "3.22" %}
+<<<<<<< HEAD
 
 package:
   name: bioconductor-{{ name|lower }}
@@ -29,6 +30,35 @@ requirements:
     - {{ compiler('cxx') }}
     - make
 
+=======
+
+package:
+  name: bioconductor-{{ name|lower }}
+  version: '{{ version }}'
+
+source:
+  url:
+    - https://bioconductor.org/packages/{{ bioc }}/bioc/src/contrib/{{ name }}_{{ version }}.tar.gz
+    - https://bioconductor.org/packages/{{ bioc }}/bioc/src/contrib/Archive/{{ name }}/{{ name }}_{{ version }}.tar.gz
+    - https://bioarchive.galaxyproject.org/{{ name }}_{{ version }}.tar.gz
+    - https://depot.galaxyproject.org/software/bioconductor-{{ name }}/bioconductor-{{ name }}_{{ version }}_src_all.tar.gz
+  md5: fb1f3c58f03104206a2cb7b15e6ac2a5
+
+build:
+  number: 1
+  rpaths:
+    - lib/R/lib/
+    - lib/
+  run_exports: '{{ pin_subpackage("bioconductor-mia", max_pin="x.x") }}'
+
+# Suggests: ade4, BiocStyle, biomformat, dada2, knitr, mediation, miaViz, microbiomeDataSets, NMF, patchwork, philr, phyloseq, reldist, rhdf5, rmarkdown, testthat, topicdoc, topicmodels, yaml
+requirements:
+  build:
+    - {{ stdlib('c') }}
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+    - make
+>>>>>>> upstream/master
   host:
     - bioconductor-biocgenerics >=0.56.0,<0.57.0
     - bioconductor-biocparallel >=1.44.0,<1.45.0
@@ -63,7 +93,10 @@ requirements:
     - liblapack
     - zlib
     - liblzma-devel
+<<<<<<< HEAD
 
+=======
+>>>>>>> upstream/master
   run:
     - bioconductor-biocgenerics >=0.56.0,<0.57.0
     - bioconductor-biocparallel >=1.44.0,<1.45.0
@@ -106,3 +139,10 @@ about:
   description: mia implements tools for microbiome analysis based on the SummarizedExperiment, SingleCellExperiment and TreeSummarizedExperiment infrastructure. Data wrangling and analysis in the context of taxonomic data is the main scope. Additional functions for common task are implemented such as community indices calculation and summarization.
   license_file: LICENSE
 
+<<<<<<< HEAD
+=======
+extra:
+  additional-platforms:
+    - linux-aarch64
+    - osx-arm64
+>>>>>>> upstream/master

@@ -1,6 +1,11 @@
 {% set name = "metadmg" %}
+<<<<<<< HEAD
 {% set version = "0.4.4" %}
 {% set sha256 = "ab9416438fa12dc35c628b3bb7a7ff8051aa90c9c1fee577f9e4e8025a034d23" %}
+=======
+{% set version = "0.5.0" %}
+{% set sha256 = "7dc16550035fc42fe0b2c5e90a5b70d32b50787f80f0c1ea168f919078b2e143" %}
+>>>>>>> upstream/master
 
 package:
   name: {{ name }}
@@ -26,6 +31,10 @@ requirements:
     - htslib
     - gsl
     - zlib
+<<<<<<< HEAD
+=======
+
+>>>>>>> upstream/master
 test:
   commands:
     - metaDMG-cpp >/dev/null 2>&1
@@ -33,6 +42,10 @@ test:
     - metaDMG-cpp lca > /dev/null 2>&1
     - compressbam  > /dev/null 2>&1 
     - extract_reads > /dev/null 2>&1
+<<<<<<< HEAD
+=======
+
+>>>>>>> upstream/master
 about:
   home: "https://github.com/metaDMG-dev/metaDMG-cpp"
   license: "GPL-3.0-or-later, MIT"

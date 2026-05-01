@@ -1,5 +1,6 @@
 #!/bin/bash
 set -e
+<<<<<<< HEAD
 
 echo "=== Debug: SRC_DIR = $SRC_DIR"
 ls -la $SRC_DIR
@@ -18,3 +19,8 @@ fi
 
 echo "=== Debug: Final contents of $DEST"
 ls -la "$DEST"
+=======
+DEST="$PREFIX/share/staphscope/modules/sccmec_module"
+mkdir -p "$DEST"
+cp -r $SRC_DIR/* "$DEST/"
+>>>>>>> upstream/master

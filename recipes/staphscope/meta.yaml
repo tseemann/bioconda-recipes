@@ -1,5 +1,9 @@
 {% set name = "staphscope" %}
+<<<<<<< HEAD
 {% set version = "1.2.0" %}
+=======
+{% set version = "1.2.1" %}
+>>>>>>> upstream/master
 
 package:
   name: {{ name|lower }}
@@ -7,12 +11,20 @@ package:
 
 source:
   url: https://github.com/bbeckley-hub/staphscope-typing-tool/archive/v{{ version }}.tar.gz
+<<<<<<< HEAD
   sha256: c737c024f9ba5b84cd6b1fd0eb0617771c81c7277dd5e5f9aad63516016c7f5e
+=======
+  sha256: 6cf294c372998c44b421fa2994d127e7f495c3d20de9950babf66f8d27ac3e60
+>>>>>>> upstream/master
 
 build:
   noarch: python
   number: 1
+<<<<<<< HEAD
   script: "{{ PYTHON }} -m pip install . --no-deps --no-build-isolation --no-cache-dir -vvv"
+=======
+  script: "{{ PYTHON }} -m pip install . --no-deps --no-build-isolation -vvv"
+>>>>>>> upstream/master
   run_exports:
     - {{ pin_subpackage(name, max_pin="x") }}
 
@@ -47,9 +59,14 @@ requirements:
     - perl-data-dumper
     - perl-getopt-long
     - perl-file-which
+<<<<<<< HEAD
     # Data packages
     - staphscope-mlst-data ==1.2.0
     - staphscope-sccmec-data ==1.2.0
+=======
+    # Data package (SCCmec only – MLST is bundled)
+    - staphscope-sccmec-data =={{ version }}
+>>>>>>> upstream/master
 
 test:
   commands:

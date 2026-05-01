@@ -1,5 +1,9 @@
 {% set name = "predictosaurus" %}
+<<<<<<< HEAD
 {% set version = "0.11.1" %}
+=======
+{% set version = "0.12.0" %}
+>>>>>>> upstream/master
 
 package:
   name: {{ name }}
@@ -7,7 +11,11 @@ package:
 
 source:
   url: https://github.com/fxwiegand/predictosaurus/archive/refs/tags/v{{ version }}.tar.gz
+<<<<<<< HEAD
   sha256: 4aa441a59e8b3018693403e5d5e3f9aa902c6a692029941cec1a447d906b9366
+=======
+  sha256: a404f4059a64e41644976b848247b7abcc3168f21cbc9ecae255f9741430ab27
+>>>>>>> upstream/master
 
 build:
   number: 0

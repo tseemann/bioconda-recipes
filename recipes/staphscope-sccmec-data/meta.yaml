@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 {% set version = "1.2.0" %}
+=======
+{% set version = "1.2.1" %}
+>>>>>>> upstream/master
 
 package:
   name: staphscope-sccmec-data
@@ -6,7 +10,11 @@ package:
 
 source:
   url: https://github.com/bbeckley-hub/staphscope-typing-tool/releases/download/v{{ version }}/staphscope-sccmec-data-v{{ version }}.tar.gz
+<<<<<<< HEAD
   sha256: fa03619392056e9eb9bbedda074549e88c5d6e568240e8ac32fed67263333161
+=======
+  sha256: f088f63701d7c6cb3a3ed7a73d3b5af0f6171db936495f8acd00d9e7444de4e3
+>>>>>>> upstream/master
 
 build:
   noarch: generic
@@ -16,9 +24,18 @@ build:
 
 test:
   commands:
+<<<<<<< HEAD
     - test -n "$(find $PREFIX -name mec_database_20171117.fasta -print -quit)"
 
 about:
   home: https://github.com/bbeckley-hub/staphscope-typing-tool
   summary: 'SCCmec typing database for StaphScope'
   license: MIT
+=======
+    - test -f $PREFIX/share/staphscope/modules/sccmec_module/run_sccmec_batch.sh
+
+about:
+  home: https://github.com/bbeckley-hub/staphscope-typing-tool
+  license: MIT
+  summary: 'SCCmec typing database and scripts for StaphScope'
+>>>>>>> upstream/master
